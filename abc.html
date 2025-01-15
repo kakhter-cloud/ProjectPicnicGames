@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indoor Games</title>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      background-color: #333; 
+}
+
+
+h1 {
+  text-align: center;
+  color: #343a40; /* Dark gray color for the heading */
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.card {
+  background-color: #212529; /* Dark background for the card */
+  color: white;
+  border: 1px solid #495057; /* Slightly lighter gray border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial light shadow */
+
+ 
+  padding: 20px;
+  max-width: 300px;
+  height: 480px !important;
+  
+  
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensure the image covers the space */
+  transition: opacity 0.3s ease;
+}
+
+.card-img-top:hover {
+  opacity: 0.8; /* Fade effect on hover */
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  color: #ff7f50; /* Vibrant orange for the card title */
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.c1{
+  margin-top: 20px;
+}
+.card-text {
+  color: black; /* Set the text color to black */
+  font-size: 1rem; /* Font size */
+  margin-bottom: 20px; /* Space below the paragraph */
+
+  line-height: 1.5; /* Adjust the line spacing */
+  letter-spacing: 1px; /* Adjusts the spacing between words */
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+.btn-secondary{
+ 
+}
+.btn .btn-secondary {
+  background-color: #495057;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.btn-secondary:hover {
+  background-color: #343a40; /* Darken button on hover */
+  transform: translateY(-2px); /* Button lift effect */
+}
+
+.container-fluid {
+  margin-top: 40px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.z {
+  border: 5px solid black;
+  text-align: justify;
+  background-color: lightgray;
+  padding: 20px;
+  color: black;
+  width: 70%;
+  margin: 0px auto 0px auto;
+display: none;
+}
+
+.g {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+.mn{
+  display: block;
+  margin: 10px auto 20px auto;
+  width: 80%;
+  height: auto;
+}
+#mn1{
+  display: block;
+  margin: 30px auto 20px auto !important;
+  width: 80%;
+  height: auto;
+}
+#mp{
+  display: block;
+  margin: -70px auto 20px auto;
+  text-align: justify;
+}
+.navbar{
+  background-color: white;
+}
+
+.kg{
+
+  display: block;
+  margin: 0px auto 0px auto;
+}
+.kg-h{
+  display: none;
+}
+  </style>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color:lightgray ;">
+  <header>
+    <nav class="navbar navbar-expand-lg navigation-wrap">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img decoding="async" src="Images Picnic & Games/PICN 13.png" alt=""
+            width="170px" height="100px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-stream navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <!-- Navigate Indoor Games -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Indoor
+                Games</a>
+              <ul class="dropdown-menu shadow">
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Kids Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href="">Musical Chair</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="">Balloon Pop</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="">Charades</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="">Twister</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">Male Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Ludo</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Carrom Board</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Football Table</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">Female Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Ludo</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Carrom Board</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Football Table</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">Family Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Ludo</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Carrom Board</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Football Table</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <!-- Navigate Outdoor Games -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside">Outdoor Games</a>
+              <ul class="dropdown-menu shadow">
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Kids Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Ludo</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Carrom Board</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Football Table</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">Male Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Ludo</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Carrom Board</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Football Table</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">Female Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Ludo</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Carrom Board</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Football Table</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">Family Games</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Ludo</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Carrom Board</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href=""> Football Table</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li><button class="main-btn">Location</button></li>
+            <li><button class="main-btn">Contact Us</button></li>
+            <!-- <li><button class="main-btn">Contact Us 03456424747</button></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <h1>Indoor Games</h1>
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+        <div class="card" style="width: 18rem;">
+          <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top" alt="Card image bn" id="mn">
+          <div class="card-body">
+            <h5 class="card-title c1">Kids</h5>
+            <p class="card-text" id="mp">Indoor kids games are activities that can be played within a home or enclosed space, involving physical, creative, or interactive play without needing outdoor space.
+ </p>
+   
+          <a href="#btk" class="btn btn-secondary" id="bt"> Kids Games</a>
+        
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+        <div class="card" style="width: 18rem;">
+          <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top" alt="Card image bn" id="mn">
+          <div class="card-body">
+            <h5 class="card-title c1">Kids</h5>
+            <p class="card-text " id="mp">Indoor female games are activities that can be enjoyed within a home or enclosed space, offering physical, creative, or social play without the need for outdoor areas.</p>
+   
+          <a href="#v" class="btn btn-secondary" id="bt"> Female Games</a>
+        
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+        <div class="card" style="width: 18rem;">
+          <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top" alt="Card image bn" id="mn">
+          <div class="card-body">
+            <h5 class="card-title c1">Kids</h5>
+            <p class="card-text " id="mp">Indoor male games are activities that can be played inside a home or enclosed space, involving physical, creative, or interactive play without requiring outdoor areas.
+
+            </p>
+   
+          <a href="#v" class="btn btn-secondary" id="bt"> Male Games</a>
+        
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+        <div class="card" style="width: 18rem;">
+          <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top" alt="Card image bn" id="mn">
+          <div class="card-body">
+            <h5 class="card-title c1">Kids</h5>
+            <p class="card-text " id="mp">Indoor family games are activities played within a home or enclosed space, offering physical, creative, or interactive play for all members without requiring outdoor space.</p>
+   
+          <a href="#v" class="btn btn-secondary" id="bt"> Family Games</a>
+        
+            
+          </div>
+        </div>
+      </div>
+ </div>
+
+
+
+
+
+
+
+<div class="kg-h">
+ <div class="row ">
+
+  <!-- <h1 class="kg">Kids Games</h1>
+  <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+    <div class="card " style="width: 18rem;">
+      <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top" alt="Card image bn" id="mn">
+      <div class="card-body">
+        <h5 class="card-title">Kids</h5>
+        <p class="card-text" id="mp">In Musical Chairs, players walk around a circle of chairs while music plays. When the music stops, players must quickly sit in a chair. The player without a chair is out, and the last person remaining wins.
+
+        </p>
+
+      <a href="#v" class="btn btn-secondary" id="btk"> Musical Chairs</a>
+    
+        
+      </div>
+    </div>
+  </div> -->
+
+
+<h1 class="kg">Kids Games</h1>
+  <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+  <div class="card" style="width: 18rem;">
+    <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top mn" alt="Card image bn">
+    <div class="card-body">
+      <h5 class="card-title">Kids</h5>
+      <p class="card-text" id="mp">In Musical Chairs, players walk around a circle of chairs while music plays. When the music stops, players must quickly sit in a chair. The player without a chair is out, and the last person remaining wins.</p>
+
+      <a href="#v" class="btn btn-secondary" id="btk"> Musical Chairs</a>
+  
+      
+    </div>
+  </div>
+</div>
+  <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+    <div class="card" style="width: 18rem;">
+      <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top mn" alt="Card image bn" >
+      <div class="card-body">
+        <h5 class="card-title">Kids</h5>
+        <p class="card-text" id="mp">Balloon Pop is an indoor game where players try to pop balloons using various body parts. They can sit on them, stomp on them, or use hands. The player who pops the most balloons wins the game.</p>
+
+      <a href="#v2" class="btn btn-secondary" id="btk2"> Balloon Pop</a>
+    
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+    <div class="card" style="width: 18rem;">
+      <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top mn" alt="Card image bn" >
+      <div class="card-body">
+        <h5 class="card-title">Kids</h5>
+        <p class="card-text" id="mp">Charades is a guessing game where players act out words or phrases without speaking. The others try to guess what the word or phrase is. The player with the most correct guesses wins the game.
+
+        </p>
+
+      <a href="#v3" class="btn btn-secondary" id="btk3"> Charades</a>
+    
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-lg-3 col-md-3 col-sm-6 mt-3 mb-3">
+    <div class="card" style="width: 18rem;">
+      <img src="Images Picnic & Games/kids-indoor.avif" class="card-img-top mn" alt="Card image bn">
+      <div class="card-body">
+        <h5 class="card-title">Kids</h5>
+        <p class="card-text" id="mp"> Twister is a physical game where players place their hands and feet on colored circles on a mat. A spinner provides the instructions, and players must follow them. The last player standing wins.
+
+        </p>
+
+      <a href="#v4" class="btn btn-secondary" id="btk4"> Twister</a>
+    
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+      
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="z" id="v">
+          <img src="Images Picnic & Games/kids-musicalChair.jpg" class="g" alt="">
+          <h1 class="kg">Musical Chairs</h1>
+          <p>
+            A game where players walk around chairs placed in a circle while music plays, and must sit when the music stops. One chair is removed after each round
+            <br>
+            <b>How to Play:</b>
+            Set up one fewer chair than the number of players in a circle.
+  Players walk around the chairs while music plays.
+  When the music stops, players must find a chair to sit in.
+  The last person remaining is the winner.
+
+  
+ 
+            <br>
+            <b>Location to Play:</b> Indoors (living room, hall) or outdoors (wide open space).
+            <br>
+            <b>Things Needed:</b> Chairs (one fewer than the number of players).
+            Music player (phone, speaker, or computer).
+            <br>
+            <b>Players::</b>   4+ players (more fun with larger groups).
+          </p>
+          <!-- <h1>Location:</h1> -->
+        </div>
+
+
+
+        <div class="z" id="v2">
+          <img src="Images Picnic & Games/kids-musicalChair.jpg" class="g" alt="">
+          <h1 class="kg"> Balloon Pop</h1>
+          <p>
+            A fun game where players pop balloons to reveal challenges or activities inside.
+            <br>
+            <b>How to Play:</b>
+            Write challenges (e.g., "do 10 jumping jacks," "sing a song") on small pieces of paper and insert them into balloons before inflating them.
+Players take turns popping balloons and completing the challenge inside.
+The first player to complete all challenges wins.
+
+  
+ 
+            <br>
+            <b>Location to Play:</b> Indoors, preferably in a large room with space for balloons.
+
+
+            <br>
+            <b>Things Needed:</b> Balloons.
+            Paper and pen to write challenges.
+            A pin or something sharp to pop the balloons.
+            <br>
+            <b>Players::</b>   3+ players.
+          </p>
+          <!-- <h1>Location:</h1> -->
+        </div>
+
+
+
+      
+        
+        <div class="z" id="v3">
+          <img src="Images Picnic & Games/kids-musicalChair.jpg" class="g" alt="">
+          <h1 class="kg"> Charades</h1>
+          <p>
+            A guessing game where players act out words or phrases without speaking while others try to guess.
+            <br>
+            <b>How to Play:</b>
+            Players take turns acting out a word or phrase (such as an animal, movie, or action) without speaking.
+            The other players must guess what the person is acting out within a time limit.
+            The team or player with the most correct guesses wins.
+
+  
+ 
+            <br>
+            <b>Location to Play:</b> Charades is perfect for any indoor location, such as a living room, family room, or even a bedroom. All you need is enough space for players to act out the clues without bumping into things.
+
+
+            <br>
+            <b>Things Needed:</b> A list of words or phrases to act out (can be written on paper).
+            <br>
+            <b>Players::</b>   2 or more.
+          </p>
+          <!-- <h1>Location:</h1> -->
+        </div>
+
+
+
+
+
+
+        <div class="z" id="v4">
+          <img src="Images Picnic & Games/kids-musicalChair.jpg" class="g" alt="">
+          <h1 class="kg"> Twister</h1>
+          <p>
+            A physical game where players place their hands and feet on colored circles on a mat, based on a spinner’s instructions.
+            <br>
+            <b>How to Play:</b>
+            Players take turns spinning the spinner and must place their hands or feet on the indicated colored circles (e.g., “Right foot on red”).
+The game gets challenging as more players are added and positions get tighter.
+The last player who can maintain their balance without falling wins.
+  
+ 
+            <br>
+            <b>Location to Play:</b>  deally played in a large indoor space such as a living room, game room, or spacious hallway. You will need enough room for a mat with colored circles on the floor, and players need to be able to move around freely without obstacles.
+            
+            
+           
+
+
+            <br>
+            <b>Things Needed:</b> A Twister mat, spinner.
+            <br>
+            <b>Players::</b>   2 or more.
+          </p>
+          <!-- <h1>Location:</h1> -->
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+ 
+ <script>
+  document.getElementsByClassName('kg-h')[0].style.display='none'
+    document.getElementById('bt').addEventListener('click', function(){
+      document.getElementsByClassName('kg-h')[0].style.display='block'
+
+      
+    })
+    document.getElementById('btk').addEventListener('click', function(){
+    document.getElementsByClassName('z')[0].style.display='block'
+    document.getElementsByClassName('z')[1].style.display='none'
+    document.getElementsByClassName('z')[2].style.display='none'
+    document.getElementsByClassName('z')[3].style.display='none'
+    
+    })
+    document.getElementById('btk2').addEventListener('click', function(){
+    document.getElementsByClassName('z')[1].style.display='block'
+    document.getElementsByClassName('z')[0].style.display='none'
+    document.getElementsByClassName('z')[2].style.display='none'
+    document.getElementsByClassName('z')[3].style.display='none'
+    })
+    document.getElementById('btk3').addEventListener('click', function(){
+    document.getElementsByClassName('z')[2].style.display='block'
+    document.getElementsByClassName('z')[0].style.display='none'
+    document.getElementsByClassName('z')[1].style.display='none'
+    document.getElementsByClassName('z')[3].style.display='none'
+    })
+    document.getElementById('btk4').addEventListener('click', function(){
+    document.getElementsByClassName('z')[3].style.display='block'
+    document.getElementsByClassName('z')[0].style.display='none'
+    document.getElementsByClassName('z')[2].style.display='none'
+    document.getElementsByClassName('z')[1].style.display='none'
+    })
+      </script>
+</body>
+</html>
